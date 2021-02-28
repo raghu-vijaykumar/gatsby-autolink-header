@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: "My Gatsby Site",
+    title: `My Gatsby Site`,
   },
   plugins: [
-    "gatsby-plugin-mdx",
+    `gatsby-plugin-mdx`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: `pages`,
+        path: `./src/pages/`,
       },
-      __key: "pages",
+      __key: `pages`,
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -20,7 +20,7 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-page-creator",
+      resolve: `gatsby-plugin-page-creator`,
       options: {
         name: `sample`,
         path: `./src/content/sample/docs/`,
