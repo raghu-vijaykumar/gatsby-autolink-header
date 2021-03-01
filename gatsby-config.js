@@ -3,12 +3,11 @@ module.exports = {
     title: `My Gatsby Site`,
   },
   plugins: [
-    `gatsby-plugin-mdx`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `./src/pages/`,
+        path: `${__dirname}/src/pages/`,
       },
       __key: `pages`,
     },
@@ -16,14 +15,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `sample`,
-        path: `./src/content/sample/docs/`,
+        path: `${__dirname}/content/sample/`,
       },
     },
     {
-      resolve: `gatsby-plugin-page-creator`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        name: `sample`,
-        path: `./src/content/sample/docs/`,
+        extensions: [`.mdx`, `.md`],
       },
     },
     {
